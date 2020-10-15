@@ -9,9 +9,13 @@ func _ready():
 	
 func _input(event):
 	# Function that manages input
+	# Checks if the pressed key is equal to the current character waiting to be typed
+	# If a character is held down, then it is read as a uppercase letter
 	if event is InputEventKey:
 		if event.is_pressed():
 			var pressed_character = parse_character(OS.get_scancode_string(event.scancode))
+			if event.echo == true:
+				pressed_character = key_held(pressed_character)
 			if(pressed_character == local_section[local_char]):
 				print(pressed_character)
 				increment_char()
@@ -47,4 +51,11 @@ func parse_character(chr):
 		chr = "`"
 	elif chr == "Semicolon":
 		chr = ";"
+	else:
+		chr = chr.to_lower()
 	return chr
+
+func key_held(key):
+	# This function is called when the key has been held down
+	# For all alphabetic characters, it makes them uppercase
+	return key.to_upper()
