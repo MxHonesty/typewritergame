@@ -1,0 +1,54 @@
+Idea generala jocului: 
+
+I se ofera jucatorului un text. 
+Acesta trebuie sa completeze textul in timp util.
+Pe parcursul scrierii, la anumite caractere sau simboluri intervin mini-taskuri ce trebuie completate (sau la anumite cuvinte)
+	Un exemplu de minitask: La cuvantul "test" trebuie apasata o anumita combinatie de taste pentru a combina.
+				La litera "e" este nevoie de a apasa de doua ori pentru a o amplasa.
+				La litera "l" este este nevoie de a apasa de trei ori.
+Textele vor fii scrieri normale care vor degenera in scrieri ezoterice ciudate.
+Pe parcurs ce playerul ajunge mai adanc in lore, documentul incepe sa devina corup.
+	Coruperea incepe sa amestece litere din cuvinte.
+	Aceasta amestecare trebuie urmarita de player.
+
+Lungimea textelor va fi determinata dupa playtest.
+
+Jocul se termina cand playerul ajunge la finalul textelor oferite.
+	Finalul: Nu se ofera explicatii concrete cand vine vorba de ce se intampla in jur.
+
+Implementare: Pentru fiecare set de 5 cuvinte, o sa existe un timp.
+              Daca timpul ramas scade sub 2 secunde, efecte de distorsionare apar.
+	      Daca timpul expira, jocul se termina.
+
+
+========================================================================================================================================
+
+Functionalitati:
+
+Sistemul de inregistrare al caracterelor de la tastatura. (Fiecare caracter citit de la tastatura va fi ferificat de caracterul curent din text)
+Sistemul de memorare al textelor. 
+Timerul pentru scrierea fiecarul set de 5 cuvinte
+Verificare conditiilor
+Visual
+
+Iteratii: 
+1. Joi 15 Oct - Sambata 17 Oct	- Sistemul de memorare al textelor, Sistemul de inregistrare al caracterelor
+2. Duminica 18 Oct - Marti 20 Oct - Timer, Verifcare a conditiilor
+3. Joi 22 Oct - Viner 23 Oct	- Visuals
+
+========================================================================================================================================
+
+I1 Tasks:
+	[] Fa rost de texte suport
+	[x] Sistem de fisier in care le salvez extern
+	[x] Nodul care manageriaza textul
+	[x] Fragmantarea textului in secvente
+	[x] Citirea secventelor in mod succesiv
+	
+	[x] Nod manager de input
+	[x] Verifica daca caracterul scris de la tastatura este echivalent cu cel curent din sir
+	[] Conditii pentru cuvinte / caractere speciale ( Ex. caractere caps -> apasa caracterul de doua ori )
+
+I2 Tasks:
+
+I3 Tasks:
