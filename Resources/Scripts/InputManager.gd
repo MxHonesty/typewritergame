@@ -6,7 +6,7 @@ var local_char = 0
 
 func _ready():
 	pass
-	
+
 func _input(event):
 	# Function that manages input
 	# Checks if the pressed key is equal to the current character waiting to be typed
@@ -33,9 +33,6 @@ func fetch_new_section():
 	get_parent().assign_next_section() 
 	local_section = get_parent().get_current_section()
 	print(local_section)
-	if local_section == "$END$":
-		# TODO Textul s-a terminats
-		pass
 
 func parse_character(chr):
 	# Turns Unicode into actual char representation Ex: "Space" -> " "
@@ -57,5 +54,7 @@ func parse_character(chr):
 
 func key_held(key):
 	# This function is called when the key has been held down
-	# For all alphabetic characters, it makes them uppercase
+	# Inout: The original character that is held down
+	# Output: Returns the modified character acording to the rules
+		# For all alphabetic characters, it makes them uppercase
 	return key.to_upper()
