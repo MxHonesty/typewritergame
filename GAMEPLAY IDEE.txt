@@ -47,7 +47,7 @@ I1 Tasks:
 	
 	[x] Nod manager de input
 	[x] Verifica daca caracterul scris de la tastatura este echivalent cu cel curent din sir
-	[] Conditii pentru cuvinte / caractere speciale ( Ex. caractere caps -> apasa caracterul de doua ori )
+	[x] Conditii pentru cuvinte / caractere speciale ( Ex. caractere caps -> apasa caracterul de doua ori )
 
 I2 Tasks:
 

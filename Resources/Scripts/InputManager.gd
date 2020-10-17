@@ -26,9 +26,9 @@ func increment_char():
 	local_char += 1
 	if local_char == len(local_section): # Daca charul depaseste stringul, atunci aduce urmatorul
 		local_char = 0
-		fetch_new_section()
+		load_new_section()
 
-func fetch_new_section():
+func load_new_section():
 	# Incarca o noua sectiune de text din TextManager
 	get_parent().assign_next_section() 
 	local_section = get_parent().get_current_section()
@@ -48,6 +48,8 @@ func parse_character(chr):
 		chr = "`"
 	elif chr == "Semicolon":
 		chr = ";"
+	elif chr == "Minus":
+		chr = "-"
 	else:
 		chr = chr.to_lower()
 	return chr
@@ -57,4 +59,9 @@ func key_held(key):
 	# Inout: The original character that is held down
 	# Output: Returns the modified character acording to the rules
 		# For all alphabetic characters, it makes them uppercase
+		# For 1 and /, it returns the shift version of the key !, ?
+	if(key == "1"):
+		return "!"
+	elif(key == "/"):
+		return "?"
 	return key.to_upper()

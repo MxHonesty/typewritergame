@@ -2,9 +2,6 @@ extends Node2D
 # Manager pentru text
 
 onready var file1 = 'res://Resources/Texts/exemplu1.txt'
-onready var file2 = 'res://Resources/Texts/TEXT1.txt'
-onready var file3 = 'res://Resources/Texts/TEXT2.txt'
-onready var file4 = 'res://Resources/Texts/TEXT3.txt'
 
 var current_text = []
 var current_section = ""
