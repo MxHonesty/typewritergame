@@ -1,5 +1,5 @@
 extends Node2D
-# Script responsabil pentru validarea tastelor apasate
+# Script responsable for validating the pressed keys
 
 var local_section = "A"
 var local_char = 0
@@ -45,7 +45,7 @@ func parse_character(chr):
 	elif chr == "Slash":
 		chr = "/"
 	elif chr == "Apostrophe":
-		chr = "`"
+		chr = "'"
 	elif chr == "Semicolon":
 		chr = ";"
 	elif chr == "Minus":
@@ -65,3 +65,13 @@ func key_held(key):
 	elif(key == "/"):
 		return "?"
 	return key.to_upper()
+
+func get_local_section():
+	# Returns local_section on call
+	# Output the string of the current section
+	return local_section
+	
+func get_local_char():
+	# Returns local_char on call
+	# Output: int indicatind the index of the current char we are listening for
+	return local_char

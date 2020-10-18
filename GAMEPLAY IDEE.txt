@@ -50,5 +50,12 @@ I1 Tasks:
 	[x] Conditii pentru cuvinte / caractere speciale ( Ex. caractere caps -> apasa caracterul de doua ori )
 
 I2 Tasks:
+	[-] <DEBUG> Apare in consola doar urmatorul caracter care trebuie scris
+	[x] <DEBUG> Apare in consola segmentul actual de text
+	[x] Timer pentru secventa locala (in InputManager)
+	[x] <DEBUG> Puncte in  timer care printeaza un mesaj in consola (incput, mijloc, cu o secunda inainte de final, final)
+	[x] Functia Game Over
+	[] Node responsabil de afiseara textului
+	[] Node responsabil pentru game flow
 
 I3 Tasks:
