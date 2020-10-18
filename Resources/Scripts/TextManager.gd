@@ -1,5 +1,5 @@
 extends Node2D
-# Manager pentru text
+# Manager for text
 
 onready var file1 = 'res://Resources/Texts/exemplu1.txt'
 
