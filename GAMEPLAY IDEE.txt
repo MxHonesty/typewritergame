@@ -58,6 +58,6 @@ I2 Tasks:
 	[x] Node responsabil de afiseara textului
 	[x] Node responsabil pentru game flow
 
-	[] Restructurare sistem timer (ficare secunda e semnalata, apoi face ceva la un anumit numar acumulat
+	[x] Restructurare sistem timer (ficare secunda e semnalata, apoi face ceva la un anumit numar acumulat
 
 I3 Tasks:

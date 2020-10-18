@@ -1,6 +1,10 @@
 extends Node2D
 # Script responsable for validating the pressed keys
 
+#==============================================================================
+# TODO CAZUL $END$ PENTRU load_new_section()
+#==============================================================================
+
 var local_section = "A"
 var local_char = 0
 

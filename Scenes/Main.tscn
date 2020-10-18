@@ -15,12 +15,9 @@ script = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="Timer" type="Timer" parent="TextManager/InputManager"]
-wait_time = 5.0
-one_shot = true
+wait_time = 2.0
 autostart = true
 script = ExtResource( 3 )
 
 [node name="VisualController" type="Node2D" parent="."]
-[connection signal="half_time" from="TextManager/InputManager/Timer" to="." method="_on_Timer_half_time"]
-[connection signal="one_second" from="TextManager/InputManager/Timer" to="." method="_on_Timer_one_second"]
 [connection signal="timeout" from="TextManager/InputManager/Timer" to="." method="_on_Timer_timeout"]
