@@ -55,7 +55,9 @@ I2 Tasks:
 	[x] Timer pentru secventa locala (in InputManager)
 	[x] <DEBUG> Puncte in  timer care printeaza un mesaj in consola (incput, mijloc, cu o secunda inainte de final, final)
 	[x] Functia Game Over
-	[] Node responsabil de afiseara textului
-	[] Node responsabil pentru game flow
+	[x] Node responsabil de afiseara textului
+	[x] Node responsabil pentru game flow
+
+	[] Restructurare sistem timer (ficare secunda e semnalata, apoi face ceva la un anumit numar acumulat
 
 I3 Tasks:
