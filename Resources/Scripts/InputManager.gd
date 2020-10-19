@@ -8,8 +8,20 @@ extends Node2D
 var local_section = "A"
 var local_char = 0
 
+var type
+var clunk
+
+# Semnal transmis cand sectiunea curenta a fost terminata
+signal section_over
+
 func _ready():
-	pass
+	type = AudioStreamPlayer.new()
+	self.add_child(type)
+	clunk = AudioStreamPlayer.new()
+	self.add_child(clunk)
+	
+	type.stream = load("res://Resources/Art/typewriter.wav")
+	clunk.stream = load("res://Resources/Art/lightclunk1.wav")
 
 func _input(event):
 	# Function that manages input
@@ -22,8 +34,9 @@ func _input(event):
 				pressed_character = key_held(pressed_character)
 			if(pressed_character == local_section[local_char]):
 				print(pressed_character)
+				type.play()
 				increment_char()
-
+			
 func increment_char():
 	# Function increments local_char counter
 	# If it increments in it's last position, it resets 
@@ -36,6 +49,7 @@ func load_new_section():
 	# Incarca o noua sectiune de text din TextManager
 	get_parent().assign_next_section() 
 	local_section = get_parent().get_current_section()
+	emit_signal("section_over")
 	print(local_section)
 
 func parse_character(chr):

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/horror ambient.wav-de05c35449848801c25b2d799e3bacbc.sample"
+
+[deps]
+
+source_file="res://Resources/Art/horror ambient.wav"
+dest_files=[ "res://.import/horror ambient.wav-de05c35449848801c25b2d799e3bacbc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

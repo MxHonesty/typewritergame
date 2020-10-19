@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/randomLFO.wav-5a97d2b3273763f41437de1eeb4eece5.sample"
+
+[deps]
+
+source_file="res://Resources/Art/randomLFO.wav"
+dest_files=[ "res://.import/randomLFO.wav-5a97d2b3273763f41437de1eeb4eece5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

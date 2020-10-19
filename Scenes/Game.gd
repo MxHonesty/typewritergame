@@ -2,7 +2,7 @@ extends Node2D
 # Game state manager
 
 var time_passed = 0 # The time that has already passed this section
-var section_time = 6 # The total time per section
+export var section_time = 15 # The total time per section
 
 # Bools for triggering limited time effects
 var half_time_triggered = false
@@ -12,7 +12,6 @@ var one_second_triggered = false
 func _on_Timer_timeout():
 	# Function called when half the time is up
 	time_passed += 1
-	print("SEMNAL")
 	if game_over_condition():
 		# Time is up Condition for game over
 		game_over()
@@ -62,3 +61,8 @@ func reset_section():
 	time_passed = 0
 	half_time_triggered = false
 	one_second_triggered = false
+
+
+func _on_InputManager_section_over():
+	# Function called everytime the current section is done.
+	reset_section()

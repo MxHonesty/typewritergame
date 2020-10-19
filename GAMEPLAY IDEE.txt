@@ -60,4 +60,6 @@ I2 Tasks:
 
 	[x] Restructurare sistem timer (ficare secunda e semnalata, apoi face ceva la un anumit numar acumulat
 
+	[] Versiune functionala total in command line
+
 I3 Tasks:
