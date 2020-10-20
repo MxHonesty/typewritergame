@@ -65,4 +65,5 @@ func reset_section():
 
 func _on_InputManager_section_over():
 	# Function called everytime the current section is done.
+	$VisualController/Ref.set_text($TextManager/InputManager.get_local_section())
 	reset_section()

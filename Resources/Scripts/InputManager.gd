@@ -10,6 +10,7 @@ var local_char = 0
 
 var type
 var clunk
+var finish
 
 # Semnal transmis cand sectiunea curenta a fost terminata
 signal section_over
@@ -19,9 +20,12 @@ func _ready():
 	self.add_child(type)
 	clunk = AudioStreamPlayer.new()
 	self.add_child(clunk)
+	finish = AudioStreamPlayer.new()
+	self.add_child(finish)
 	
 	type.stream = load("res://Resources/Art/typewriter.wav")
 	clunk.stream = load("res://Resources/Art/lightclunk1.wav")
+	finish.stream = load("res://Resources/Art/clank1.wav")
 
 func _input(event):
 	# Function that manages input
@@ -34,7 +38,10 @@ func _input(event):
 				pressed_character = key_held(pressed_character)
 			if(pressed_character == local_section[local_char]):
 				print(pressed_character)
-				type.play()
+				if(local_char == len(local_section) - 1):
+					finish.play()
+				else: 
+					type.play()
 				increment_char()
 			
 func increment_char():

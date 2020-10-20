@@ -19,6 +19,11 @@ config/name="Typewriter"
 run/main_scene="res://Scenes/Main.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=325
+window/size/height=400
+
 [editor_plugins]
 
 enabled=PoolStringArray( "gut" )
