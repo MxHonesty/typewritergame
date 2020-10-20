@@ -12,6 +12,8 @@ var type
 var clunk
 var finish
 
+var sprite
+
 # Semnal transmis cand sectiunea curenta a fost terminata
 signal section_over
 
@@ -22,6 +24,8 @@ func _ready():
 	self.add_child(clunk)
 	finish = AudioStreamPlayer.new()
 	self.add_child(finish)
+	
+	sprite = get_parent().get_parent().get_node("VisualController/Sprite")
 	
 	type.stream = load("res://Resources/Art/typewriter.wav")
 	clunk.stream = load("res://Resources/Art/lightclunk1.wav")
@@ -51,7 +55,16 @@ func increment_char():
 	if local_char == len(local_section): # Daca charul depaseste stringul, atunci aduce urmatorul
 		local_char = 0
 		load_new_section()
-
+	sprite.position.x = calculate_sprite_position()
+	
+func calculate_sprite_position():
+	# Function calculates the position in whitch the slider must be 
+	# on every increment
+	var procent = float(local_char) / float(len(local_section))
+	var pozitie_x = 200 * procent - 100
+	return pozitie_x
+	
+	
 func load_new_section():
 	# Incarca o noua sectiune de text din TextManager
 	get_parent().assign_next_section() 

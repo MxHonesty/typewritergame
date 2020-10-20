@@ -12,4 +12,5 @@ func _ready():
 
 
 func set_text(new_text):
-	text = new_text
+	bbcode_text = new_text
+
