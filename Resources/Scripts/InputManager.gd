@@ -5,13 +5,12 @@ extends Node2D
 # TODO CAZUL $END$ PENTRU load_new_section()
 #==============================================================================
 
-var local_section = "A"
+var local_section = " "
 var local_char = 0
 
 var type
 var clunk
 var finish
-
 var sprite
 
 # Semnal transmis cand sectiunea curenta a fost terminata
@@ -56,7 +55,9 @@ func increment_char():
 		local_char = 0
 		load_new_section()
 	sprite.position.x = calculate_sprite_position()
-	
+	get_parent().get_parent().get_node("VisualController/Ref2").next_character()
+
+
 func calculate_sprite_position():
 	# Function calculates the position in whitch the slider must be 
 	# on every increment

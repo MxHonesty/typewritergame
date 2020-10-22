@@ -1,12 +1,21 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Resources/Scripts/TextManager.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Scripts/InputManager.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Timer.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Game.gd" type="Script" id=4]
-[ext_resource path="res://bg.png" type="Texture" id=5]
-[ext_resource path="res://chestie.png" type="Texture" id=6]
+[ext_resource path="res://Resources/bg.png" type="Texture" id=5]
+[ext_resource path="res://Resources/chestie.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/Ref.gd" type="Script" id=7]
+[ext_resource path="res://JMH Typewriter.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Scenes/Ref_Overlay.gd" type="Script" id=9]
+[ext_resource path="res://Resources/go.png" type="Texture" id=10]
+[ext_resource path="res://Resources/gg.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/game_over.gd" type="Script" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 8 )
 
 [node name="GameController" type="Node2D"]
 script = ExtResource( 4 )
@@ -42,14 +51,51 @@ margin_left = 43.0
 margin_top = 307.406
 margin_right = 307.0
 margin_bottom = 391.406
+custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
-bbcode_text = "Hold A to start "
-text = "Hold A to start "
+bbcode_text = "Press SPACE to start "
+text = "Press SPACE to start "
 fit_content_height = true
 scroll_active = false
 script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Ref2" type="RichTextLabel" parent="VisualController"]
+anchor_right = 0.753
+margin_left = 43.0
+margin_top = 307.406
+margin_right = 307.0
+margin_bottom = 391.406
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "Hold A to start "
+visible_characters = 0
+text = "Hold A to start "
+fit_content_height = true
+scroll_active = false
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Space" type="Sprite" parent="VisualController"]
+
+[node name="game_over" type="Node2D" parent="VisualController"]
+position = Vector2( 0, 200 )
+script = ExtResource( 12 )
+
+[node name="go_screen" type="Sprite" parent="VisualController/game_over"]
+visible = false
+texture = ExtResource( 10 )
+centered = false
+
+[node name="gg_screen" type="Sprite" parent="VisualController/game_over"]
+visible = false
+texture = ExtResource( 11 )
+centered = false
+[connection signal="game_done" from="TextManager" to="." method="_on_TextManager_game_done"]
 [connection signal="section_over" from="TextManager/InputManager" to="." method="_on_InputManager_section_over"]
 [connection signal="timeout" from="TextManager/InputManager/Timer" to="." method="_on_Timer_timeout"]

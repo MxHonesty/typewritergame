@@ -15,3 +15,4 @@ func _ready():
 func reset_timer():
 	# Function for reseting the timer
 	start(timp) # set wait_time to timp and restarts the timer
+

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/chestie.png-2b4adf20194143233a4ef4a4096e91df.stex"
+path="res://.import/gg.png-cee59e6f0b5cf108b836b505a90a6019.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://chestie.png"
-dest_files=[ "res://.import/chestie.png-2b4adf20194143233a4ef4a4096e91df.stex" ]
+source_file="res://Resources/gg.png"
+dest_files=[ "res://.import/gg.png-cee59e6f0b5cf108b836b505a90a6019.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -3,6 +3,8 @@ extends Node2D
 
 onready var file1 = 'res://Resources/Texts/exemplu1.txt'
 
+signal game_done
+
 var current_text = []
 var current_section = ""
 var current_index = 0
@@ -43,3 +45,4 @@ func assign_next_section():
 		current_index += 1
 	else:
 		current_section = "$END$"
+		emit_signal("game_done")
